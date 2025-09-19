@@ -2,6 +2,7 @@
 {
     internal class Program
     {
+        //Method to generate a random number in a specified interval
         public static int GenerateSecretNumber(int lowestValue, int highestValue)
         {
             var randomNumber = new Random();
@@ -9,6 +10,7 @@
             return number;
         }
 
+        //Method to check if input is a number and in specified interval
         public static int CorrectUserInput(int lowestValue, int highestValue)
         {
             bool isAnswerValid = false;
@@ -27,6 +29,7 @@
             return inputNumber;
         }
 
+        //Method to compare userguess to secret number and give feedback. Keeping track on number of guesses. 
         public static void CheckGuesses(int numberOfAcceptedGuesses)
         {
             int secretNumber = GenerateSecretNumber(1, 20);
@@ -60,6 +63,7 @@
             }            
         }
 
+        //Numbers game, user is asked to guess a nember.
         static void Main(string[] args)
         {
             int lowestValue = 1;
